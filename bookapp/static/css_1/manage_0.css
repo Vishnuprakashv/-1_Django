@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+/* Navbar */
+.manage_nav{
+    height: 12vh;
+    width: 100%;
+background: #1f1f38;
+}
+.manage_nav_elements{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+/* Nav Button css */
+.manage_nav_elements>div>button{
+    height: 2.6rem;
+    width: 8.5rem;
+    color: #fff;
+    background-color: #4db5ff;
+    border-radius: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+.manage_nav_elements>div>button:hover{
+    background: rgb(82, 28, 82);
+    color: #e22727;
+}
+.manage_nav_elements>div>button>a{
+    text-decoration: none;
+    color: #fff;
+}
+/* Form css */
+.manage_section_form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    /* background: red; */
+    color: #fff;
+}
+.manage_section_element{
+    width: 50%;
+    padding-top: 1rem;
+    background: #000;
+    border-radius: 2rem;
+}
+.manage_section_element>DIV{
+    display: flex;
+}
+.label{
+    width: 30%;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+.input{
+    width: 68%;
+    height: 3.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input>input{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.3rem;
+    padding-left: 0.3rem;
+}
+/* Button box css*/
+.btn_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+}
+/* Button css */
+.btn_box>button{
+    height: 2.6rem;
+    width: 7rem;
+    color: #fff;
+    background-color: #4db5ff;
+    border-radius: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+.btn_box>button:hover{
+    background: rgb(82, 28, 82);
+    color: #e22727;
+}

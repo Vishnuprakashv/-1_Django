@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link css -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css_1/manage_0.css' %}">
+</head>
+<body>
+    <!-- Manage box -->
+        <div>
+            <h1>Manage Product</h1>
+        </div>
+        <!-- Manage Nav box -->
+        <div class="manage_nav">       
+            <div class="manage_nav_elements">
+                <div>
+                    <button><a href="/main/home/ ">Home</a></button>
+                </div>
+                <div>
+                    <button><a href="/main/display/">Display Product</a></button>
+                </div>
+            </div>
+        </div>  
+        <!-- Manage Form Section -->
+        <div class="manage_section_form">
+            <form action=""  method="POST" class="manage_section_element" >
+                {% csrf_token %}
+                <div>
+                   <div class="label"> <label for="name"> <h3>Book Name:</h3> </label></div>
+                   <div class="input"> <input type="text" name="book_name" id="name" placeholder="Book Name" autocomplete="off"></div>
+                </div>
+                
+                <div>
+                    <div class="label"><label for="author"> <h3>Author/Writer: </h3> </label></div>
+                   <div class="input"> <input type="text" name="book_author" id="author" placeholder="Author/Writer" autocomplete="off"> </div> 
+                </div>
+
+                <div>
+                    <div class="label"><label for="category"> <h3>Category:</h3> </label></div>
+                   <div class="input"> <input type="text" name="book_category" id="category" placeholder="Category" autocomplete="off">  </div> 
+                </div>
+
+                <div>
+                    <div class="label"><label for="pieces"> <h3>Pieces: </h3> </label></div>
+                    <div class="input"><input type="text" name="book_pieces"  id="pieces" placeholder="Enter pieces" autocomplete="off" ></div>
+                </div>
+
+                <div>
+                    <div class="label"><label for="price"> <h3>Price: </h3> </label></div>
+                    <div class="input"><input type="text" name="book_price"  id="price" placeholder="Enter price" autocomplete="off"> </div>      
+                </div>
+                
+                <br>
+                <div class="btn_box">
+                    <button  onclick="mul()" >Save</button>
+                </div>
+            </form>
+        </div>  
+    <!-- JavaScript for dynamic fill the data If i gave inside
+         two inputs tag provide values i want inside another inputs tag 
+         so apply these
+        -->
+    <script>
+        let total = 0
+        function mul(){
+            let pieces = document.getElementById('pieces').value
+            let price = document.getElementById('price').value
+            total = pieces*price
+            let disp=document.getElementById('display')
+            disp.value=total
+        }
+    </script>
+</body>
+</html>

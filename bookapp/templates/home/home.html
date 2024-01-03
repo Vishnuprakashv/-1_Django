@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Link css -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css_1/home_02.css' %}">
+</head>
+<body>
+    <div class="main_container">
+        <!-- Nav box -->
+        <div class="main_container_nav">
+                <div>
+                    <a href="/main/manage_store/" id="manage_anchor">Manage Product</a>
+                </div>
+                <div >
+                    <a href="/main/search/" id="find">Search</a>
+                </div>
+        </div> 
+         <!--Display Data details box  -->
+        <div class="main_container_section">
+            <h1 id="data">Data Details</h1>
+            <div class="display_data"> 
+                <table class="table_data">
+                    <thead>
+                      <tr>
+                        <th>#SN</th>
+                        <th>Book Name</th>
+                        <th>Author/Writer</th>
+                        <th>Category</th>
+                        <th>Pieces</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                      <tbody>
+                        {% for e in books %}
+                        <tr>
+                          <td>{{forloop.counter}}</td>
+                          <td>{{e.name}}</td>
+                          <td>{{e.author}}</td>
+                          <td>{{e.category}}</td>
+                          <td>{{e.pieces}}</td>
+                          <td>{{e.price}}</td>
+                          <td>{{e.total}}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

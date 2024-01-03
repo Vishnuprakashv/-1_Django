@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body box container css */
+.update_container{
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+}
+/* Inside body box container another container css */
+.update_container_box{
+    width: 100%;
+}
+/* Container Nav css */
+.update_nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.update_nav_elements{
+    height: 10vh;
+    width: 96%;
+    color: #fff;
+    border: 1px solid red;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 2rem 2rem;
+}
+.update_nav_elements>div>button{
+    height: 2.6rem;
+    width: 7rem;
+    color: #fff;
+    background-color: #4db5ff;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+}
+.anchor{
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+.anchor:hover{
+    background: rgb(82, 28, 82);
+    color: #e22727;
+}
+/* Header--Update Product--css */
+.update_header{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Update Section css */
+.update_section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    
+}
+.update_section_element{
+    width: 50%;
+    padding-top: 1rem;
+    background: #000;
+    border-radius: 2rem;
+}
+.update_section_element>div{
+    display: flex;
+}
+.label{
+    width: 30%;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+.input{
+    width: 68%;
+    height: 3.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.input>input{
+    width: 100%;
+    height: 2rem;
+    padding-left: 0.3rem;
+    font-size: 1.4rem;
+}
+.btn_box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+}
+.btn_box>button{
+    height: 2.6rem;
+    width: 7rem;
+    color: #fff;
+    background-color: #4db5ff;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    border: none;
+}
+.btn_box>button:hover{
+    background: rgb(82, 28, 82);
+    color: #e22727;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link css -->
+     {% load static %}
+     <link rel="stylesheet" href="{% static 'css_1/display_01.css' %}">
+</head>
+<body>
+    <div class="card">
+      <!--Library Management Box  -->
+      <div class="card_main_header"><h1>Library Management System</h1></div>
+      <!-- Nav Box -->
+          <div class="card_nav_box">
+
+            <div class="card_nav"><button><a href="/main/home/">Home</a></button></div>
+          </div>
+          <!-- List of books box -->
+            <div class="card_Section_header"><h1>List Of Books</h1></div>
+        <div class="card_body_box">
+        <div class="card_body">
+          <!-- Display box -->
+              <table class="table_data">
+                <thead>
+                  <tr>
+                    <th>#SN</th>
+                    <th>Book Name</th>
+                    <th>Author/Writer</th>
+                    <th>Category</th>
+                    <th>Pieces</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    {% for e in books %}
+                    <tr>
+                      <td>{{forloop.counter}}</td>
+                      <td>{{e.name}}</td>
+                      <td>{{e.author}}</td>
+                      <td>{{e.category}}</td>
+                      <td>{{e.pieces}}</td>
+                      <td>{{e.price}}</td>
+                      <td>{{e.total}}</td>
+                      <td class="delete_update">
+                        <a href="/main/del-book/{{e.id}}" id="anchor_01" >DELETE</a>
+                        <h2>|</h2>
+                        <a href="/main/update-book/{{e.id}}" id="anchor_02">UPDATE</a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    
+     
+</body>
+</html>

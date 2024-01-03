@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+/*Library Management System css  */
+.card_main_header{
+    height: 10vh;
+    padding-left: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+/* Nav css */
+.card_nav_box{
+ height: 10vh;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+.card_nav{
+     height: 100%;
+     width: 98%;
+     background: #1f1f38;
+     color: #fff;
+     border-radius: 0 0 2rem 2rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.card_nav>button{
+    height: 2.6rem;
+    width: 7rem;
+    color: #fff;
+    background-color: #4db5ff;
+    border-radius: 1rem;
+    font-size: 1rem;
+    border: none;
+}
+.card_nav>button>a{
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    font-size: 1.2rem;
+}
+.card_nav>button:hover{
+    background: rgb(82, 28, 82);
+    color: #e22727;
+}
+/*  List Of Books css*/
+.card_Section_header{
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+/* Display Data css */
+.card_body_box{
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #1f1f38;
+    border-radius: 3rem;
+}
+.card_body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.table_data{
+    width: 70%;
+    background-color: #000;
+}
+.card_body>table,th,td{
+    border: 1px solid navy;
+    color: #fff;
+    text-align: center;
+  }
+#anchor_01{
+    color: red;
+    text-decoration: none;
+}
+#anchor_02{
+    color: #4db5ff;
+    text-decoration: none;
+}
+.delete_update{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

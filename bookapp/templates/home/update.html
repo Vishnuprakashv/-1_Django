@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link css -->
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'css_1/update_0.css' %}">
+</head>
+<body>
+<div class="update_container">
+    <!-- Nav box -->
+    <div class="update_nav">
+        <div class="update_nav_elements">
+            <div>
+                <button><a href="/main/home/" class="anchor">Home</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- Update Section -->
+    <div class="update_header"><h1>Update Product</h1></div>
+    <div class="update_container_box">
+        <div class="update_section">
+            <form action="/main/do-update-book/{{book.id}}" method="POST" class="update_section_element">
+                {% csrf_token %}
+                
+                <div>
+                    <div class="label"><label for="name"><h3>Book Name:</h3></label></div>
+                    <div class="input"><input type="text" value="{{book.name}}" name="book_name" id="name" placeholder="Book Name" autocomplete="off"></div>
+                </div>
+               
+                <div>
+                    <div class="label"><label for="author"><h3>Author/Writer:</h3></label></div>
+                    <div class="input"><input type="text" name="book_author" value="{{book.author}}" id="author" placeholder="Author/Writer" autocomplete="off"></div>
+                </div>
+                <div>
+                    <div class="label"><label for="category"><h3>Category:</h3></label></div>
+                    <div class="input"><input type="text" value="{{book.category}}" name="book_category" id="category" placeholder="Category" autocomplete="off"></div>
+                </div>
+                <div>
+                    <div class="label"><label for="pieces"><h3>Pieces:</h3></label></div>
+                   <div class="input"> <input type="text" value="{{book.pieces}}" name="book_pieces" id="pieces" autocomplete="off"></div>
+                </div>
+                <div>
+                    <div class="label"><label for="price"><h3>Price:</h3></label></div>
+                    <div class="input"><input type="text" value="{{book.price}}" name="book_price" id="price" autocomplete="off"></div>
+                </div>
+                <div>
+                    <div class="label"><label for="total"><h3>Total:</h3></label></div>
+                   <div class="input"> <input type="text" value="{{book.total}}" name="book_total" id="total" readonly autocomplete="off"></div>
+                </div>
+                <div class="btn_box">
+                    <button onclick="calculateTotal()"> Submit</button>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
+<!-- JavaScript apply for dynamic fill the data If i gave inside
+    two inputs tag provide values i want inside another inputs tag 
+    so apply these-->
+<script>
+    function calculateTotal() {
+        let pieces = parseFloat(document.getElementById('pieces').value);
+        let price = parseFloat(document.getElementById('price').value);
+        let total = pieces * price;
+        if (!isNaN(total)) {
+            document.getElementById('total').value = total;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link css -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css_1/search_0.css' %}">
+</head>
+<body>
+<div class="search_box">
+    <div class="search_box_01">
+        <a href="/main/home/ " id="anchor_01">Home</a>
+        <!-- Search box -->
+        <form method="GET" action="">
+            <input type="text" name="search" placeholder="Search by name, author, or ID" autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="search_content">
+    {% if query %}
+        <div><p>Search results for '{{ query }}':</p></div>
+        {% if books %}
+        <div>
+            <!--Search Display box -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Pieces</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                        <tr>
+                            <td>{{ book.name }}</td>
+                            <td>{{ book.author }}</td>
+                            <td>{{ book.category }}</td>
+                            <td>{{ book.pieces }}</td>
+                            <td>{{ book.price }}</td>
+                            <td>{{ book.total }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+           <div> <p>No matching results found.</p></div>
+        {% endif %}
+    {% else %}
+
+        {% for book in books %}
+    <!--Search Display Logic -->
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>      
+      
+
+</body>
+</html>
